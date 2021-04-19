@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// NOTE - DOES NOT DETECT CSS FILE LOCATION
 import './main.css';
 import App from './client/components/App';
 import reportWebVitals from './reportWebVitals';
