@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { fetchFruits } from '../actions'
 
-import Header from './Header'
+import Logo from './Logo'
 import ColorPicker from './ColorPicker'
 import Footer from './Footer'
 
@@ -15,14 +15,16 @@ function App (props) {
   return (
     <>
       <div className='app'>
-        <Header />
-
+        <div className='header'>
+          <ColorPicker />
+          <Logo />
+        </div>
         <ul>
           {props.fruits.map(fruit => (
             <li key={fruit}>{fruit}</li>
           ))}
         </ul>
-        <ColorPicker />
+
         <Footer />
       </div>
     </>
