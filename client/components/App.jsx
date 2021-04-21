@@ -6,6 +6,7 @@ import { fetchFruits } from '../actions'
 import Logo from './Logo'
 import ColorPicker from './ColorPicker'
 import Footer from './Footer'
+import ColorCodes from './ColorCodes'
 
 function App (props) {
   useEffect(() => {

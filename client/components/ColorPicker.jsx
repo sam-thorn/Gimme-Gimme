@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RgbaColorPicker } from 'react-colorful'
+import { HexColorPicker, HexColorInput } from 'react-colorful'
 
 function ColorPicker () {
   const [color, setColor] = useState('#CC8899')
@@ -7,7 +7,9 @@ function ColorPicker () {
     <div>
 
       <section className="color-picker-layout">
-        <RgbaColorPicker color={color} onChange={setColor} />
+        {/* <RgbaColorPicker color={color} onChange={setColor} /> */}
+        <HexColorPicker color={color} onChange={setColor} />
+        <HexColorInput color={color} onChange={setColor} />
       </section>
 
     </div>
