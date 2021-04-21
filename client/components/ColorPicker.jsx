@@ -9,7 +9,8 @@ function ColorPicker () {
       <section className="color-picker-layout">
         {/* <RgbaColorPicker color={color} onChange={setColor} /> */}
         <HexColorPicker color={color} onChange={setColor} />
-        <HexColorInput color={color} onChange={setColor} />
+        <HexColorInput type='text' color={color} onChange={setColor} />
+
       </section>
 
     </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 
-// import GithubIcon from './images/github.svg'
+import repoLink from './github.svg'
 
 function Footer () {
   return (
-    <>
-      {/* <img src={GithubIcon} alt='github icon'/> */}
-    </>
+    <div className='repo-link-container'>
+      <a className='repo-link' href='#'><img className='repo-image' src={repoLink} alt='link to repo' /></a>
+    </div>
   )
 }
 
