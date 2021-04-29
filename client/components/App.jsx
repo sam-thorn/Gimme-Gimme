@@ -1,21 +1,30 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+// import { sendNewColor } from '../actions'
 
 import Logo from './Logo'
 import ColorPicker from './ColorPicker'
 import Footer from './Footer'
-import ColorCodes from './ColorCodes'
+// import ColorCodes from './ColorCodes'
 
 function App (props) {
-  useEffect(() => {
-    props.dispatch(fetchFruits())
-  }, [])
+  // useEffect(() => {
+  //   props.dispatch(fetchFruits())
+  // }, [])
+
+  // useEffect(() => {
+  //   props.dispatch(sendNewColor())
+  // }, [])
+
+  // A variable that allows another variable to be passed in to style an element in-line.
+  const appBgColor = {
+    backgroundColor: props.color
+  }
 
   return (
     <>
-      <div className='app'>
+      <div style={appBgColor}>
         <div className='header'>
           <ColorPicker />
           <Logo />
@@ -33,7 +42,8 @@ function App (props) {
 }
 const mapStateToProps = (globalState) => {
   return {
-    fruits: globalState.fruits
+    fruits: globalState.fruits,
+    color: globalState.bgcolor
   }
 }
 
