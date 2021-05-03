@@ -6,13 +6,9 @@ import { connect } from 'react-redux'
 import Logo from './Logo'
 import ColorPicker from './ColorPicker'
 import Footer from './Footer'
-// import ColorCodes from './ColorCodes'
+import ColorCodes from './ColorCodes'
 
 function App (props) {
-  // useEffect(() => {
-  //   props.dispatch(fetchFruits())
-  // }, [])
-
   // useEffect(() => {
   //   props.dispatch(sendNewColor())
   // }, [])
@@ -29,11 +25,9 @@ function App (props) {
           <ColorPicker />
           <Logo />
         </div>
-        <ul>
-          {props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+        <div>
+          <ColorCodes />
+        </div>
 
         <Footer />
       </div>
