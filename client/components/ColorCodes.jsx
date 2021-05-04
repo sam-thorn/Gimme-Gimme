@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { getColorCodes } from '../apis/codes'
+import { getColorName } from '../apis/colorName'
+import { colord } from 'colord'
 
 function ColorCodes () {
   const [codes, setCodes] = useState('')
   useEffect(() => {
-    getColorCodes()
+    getColorName()
       .then(code => {
         setCodes(code)
         return null
