@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 // BG COLOR: use useEffect here to look for changes to a specific thing: changing color codes
 import { HexColorPicker, HexColorInput } from 'react-colorful'
 
 function ColorPicker () {
-  const [color, setColor] = useState('#CC8899')
-
   // Use a react hook instead of Redux?
   // useEffect(() => {
 

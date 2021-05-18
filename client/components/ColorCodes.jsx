@@ -21,7 +21,7 @@ function ColorCodes () {
         <tbody>
           <tr>
             <td>RGB</td>
-            <td>{codes}</td>
+            <td></td>
           </tr>
           <tr>
             <td>CMYK</td>
@@ -32,7 +32,7 @@ function ColorCodes () {
             <td></td>
           </tr>
           <tr>
-            <td>XYZ</td>
+            <td>HSV</td>
             <td></td>
           </tr>
         </tbody>
