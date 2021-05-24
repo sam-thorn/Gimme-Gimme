@@ -11,3 +11,10 @@ Clone this repo, `cd` into the new directory and then:
 npm i
 npm run dev
 ```
+Open a new browser window/tab and run:
+
+```
+https://localhost3000
+```
+
+You may need to refresh the page. Your browser should now display the project.
