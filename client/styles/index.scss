@@ -1,6 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
 
-html, 
+html,
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 120px 32px;
+  transition: color 0.15s;
+}
+
+.color-picker-layout .react-colorful {
+  padding: 16px;
+  border-radius: 12px;
+  background: rgb(248, 248, 248);
+  box-shadow: 0 1px 3px rgb(175, 175, 175);
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 200px;
+  margin: 20px 0 0 0;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #eee;
+  outline: none;
+  font: inherit;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input:hover {
+  background: rgb(248, 248, 248);
+}
+
+input:focus {
+  border-color: rgb(179, 179, 179);
+}
+
+.logo-block {
+  padding-left: 32px;
+}
+
+#logo-block-copy {
+  padding-top: 16px;
+}
+
+.repo-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.repo-image {
+  height: 30px;
+  margin-bottom: 20px;
 }

@@ -2,7 +2,7 @@ import React from 'react'
 // BG COLOR: use useEffect here to look for changes to a specific thing: changing color codes
 import { HexColorPicker, HexColorInput } from 'react-colorful'
 
-function ColorPicker () {
+function ColorPicker (props) {
   // Use a react hook instead of Redux?
   // useEffect(() => {
 
@@ -10,9 +10,9 @@ function ColorPicker () {
 
   return (
     <div>
-      <section className="color-picker-layout">
-        <HexColorPicker color={color} onChange={setColor} />
-        <HexColorInput type='text' color={color} onChange={setColor} />
+      <section className='color-picker-layout'>
+        <HexColorPicker color={props.color} onChange={props.setColor} />
+        <HexColorInput type='text' color={props.color} onChange={props.setColor} />
       </section>
     </div>
   )

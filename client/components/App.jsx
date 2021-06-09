@@ -9,7 +9,7 @@ import Footer from './Footer'
 import ColorCodes from './ColorCodes'
 
 function App (props) {
-  const [color, setColor] = useState('#CC8899')
+  const [color, setColor] = useState('#81D274')
   // useEffect(() => {
   //   props.dispatch(sendNewColor())
   // }, [])
@@ -29,7 +29,6 @@ function App (props) {
         <div>
           <ColorCodes />
         </div>
-
         <Footer />
       </div>
     </>
