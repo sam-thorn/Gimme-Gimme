@@ -72,12 +72,12 @@ input:focus {
 }
 
 #logo-block-copy {
-  padding-top: 16px;
+  padding-top: 26px;
 }
 
 .ctable {
   display: flex;
-  width: 360px;
+  width: 410px;
   background-color: #f8f8f8;
   padding: 16px;
   border-radius: 4px 0px 0px 4px;
@@ -92,7 +92,7 @@ input:focus {
 .ctable-row {
   display: flex;
   justify-content: space-around;
-  background-color: #eee;
+  background-color: #f8f8f8;
   border-bottom: lightslategrey 1px solid;
   padding-top: 16px;
   padding-bottom: 4px;
@@ -103,7 +103,7 @@ input:focus {
 }
 
 .ctable-code-value {
-  padding-left: 16vw;
+  padding-left: 252px;
   padding-right: 16px;
 }
 
@@ -112,6 +112,7 @@ input:focus {
   flex-direction: column;
   background-color: #f8f8f8;
   padding: 18px 16px 16px 0;
+  border-radius: 0px 4px 4px 0px;
 }
 
 .repo-link-container {
