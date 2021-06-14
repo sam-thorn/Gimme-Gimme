@@ -22,11 +22,11 @@ function App (props) {
   return (
     <>
       <div style={appBgColor}>
-        <div className='header'>
+        <div className='layout-top'>
           <ColorPicker color={color} onChange={setColor}/>
           <Logo />
         </div>
-        <div>
+        <div className='layout-bottom'>
           <ColorCodes />
         </div>
         <Footer />

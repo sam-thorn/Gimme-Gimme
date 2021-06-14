@@ -15,14 +15,25 @@ body {
   font: inherit;
 }
 
-.header {
+.layout-top {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   max-width: 720px;
   margin: 0 auto;
-  min-height: 100vh;
-  padding: 120px 32px;
+  min-height: 50vh;
+  padding: 120px 32px 0px 32px;
+  transition: color 0.15s;
+}
+
+.layout-bottom {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 50vh;
+  padding: 32px 32px 120px 32px;
   transition: color 0.15s;
 }
 
@@ -64,6 +75,45 @@ input:focus {
   padding-top: 16px;
 }
 
+.ctable {
+  display: flex;
+  width: 360px;
+  background-color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.ctable-body {
+  display: flex;
+  flex-direction: column;
+  background-color: lightcoral;
+}
+
+.ctable-row {
+  display: flex;
+  justify-content: space-around;
+  background-color: #eee;
+  border-bottom: lightslategrey 1px solid;
+  padding-top: 16px;
+  padding-bottom: 4px;
+}
+
+.ctable-code-type {
+  padding-left: 16px;
+}
+
+.ctable-code-value {
+  padding-left: 16vw;
+  padding-right: 16px;
+}
+
+.clipboard-button-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  padding: 18px 16px 16px 0;
+}
+
 .repo-link-container {
   display: flex;
   align-items: center;
@@ -73,6 +123,7 @@ input:focus {
 .repo-image {
   height: 30px;
   margin-bottom: 20px;
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=styles.css.map*/
