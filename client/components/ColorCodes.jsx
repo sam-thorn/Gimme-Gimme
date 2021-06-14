@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
+import Snackbar from '@material-ui/core/Snackbar'
+import IconButton from '@material-ui/core/IconButton'
+import { CloseIcon } from '@material-ui/icons'
+import { makeStyles } from '@material-ui/core/styles'
 import { getColorName } from '../apis/colorName'
 import { colord } from 'colord'
 
@@ -11,6 +14,8 @@ const useStyles = makeStyles({
 })
 
 function ColorCodes () {
+  const classes = useStyles()
+
   const [codes, setCodes] = useState('')
   useEffect(() => {
     getColorName()
@@ -23,7 +28,18 @@ function ColorCodes () {
       })
   }, [])
 
-  const classes = useStyles()
+  const [open, setOpen] = useState(false)
+
+  const handleClick = () => {
+    setOpen(true)
+  }
+
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
+    setOpen(false)
+  }
 
   return (
     <>
@@ -59,9 +75,26 @@ function ColorCodes () {
       </div>
       <div className='clipboard-button-container'>
         <div className={classes.root}>
-          <Button variant="outlined" color="primary">
+          <Button variant="outlined" color="primary" onClick={handleClick}>
           gimme that code
           </Button>
+          <Snackbar
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center'
+            }}
+            open={open}
+            autoHideDuration={4000}
+            onClose={handleClose}
+            message='Copied!'
+            action={
+              <>
+                <IconButton size='small' aria-label='close' color='inherit' onClick={handleClose}>
+                  <CloseIcon fontSize='small'/>
+                </IconButton>
+              </>
+            }
+          />
         </div>
         <div className={classes.root}>
           <Button variant="outlined" color="primary">

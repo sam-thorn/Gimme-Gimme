@@ -120,6 +120,10 @@ input:focus {
   border-radius: 0px 4px 4px 0px;
 }
 
+.MuiButton-root {
+  text-transform: lowercase;
+}
+
 // Footer
 .repo-link-container {
   display: flex;
