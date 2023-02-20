@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 
 // import { sendNewColor } from '../actions'
@@ -9,6 +9,7 @@ import Footer from './Footer'
 import ColorCodes from './ColorCodes'
 
 function App (props) {
+  const [color, setColor] = useState('#81D274')
   // useEffect(() => {
   //   props.dispatch(sendNewColor())
   // }, [])
@@ -21,14 +22,13 @@ function App (props) {
   return (
     <>
       <div style={appBgColor}>
-        <div className='header'>
-          <ColorPicker />
+        <div className='layout-top'>
+          <ColorPicker color={color} onChange={setColor}/>
           <Logo />
         </div>
-        <div>
+        <div className='layout-bottom'>
           <ColorCodes />
         </div>
-
         <Footer />
       </div>
     </>
@@ -36,7 +36,6 @@ function App (props) {
 }
 const mapStateToProps = (globalState) => {
   return {
-    fruits: globalState.fruits,
     color: globalState.bgcolor
   }
 }
